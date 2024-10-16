@@ -1,7 +1,7 @@
 # ApplicationReviewAPI
 ApplicationReviewAPI é uma API simples para gerenciar avaliações de filmes e séries, permitindo que usuários criem, atualizem, visualizem e excluam avaliações. Construída com FastAPI, SQLAlchemy e Redis, ela oferece uma solução eficiente com caching e sistema de logging integrado.
 
-![Demo](./review.png)
+![Demo](./backend/review.png)
 
 ## Funcionalidades
 
@@ -31,19 +31,7 @@ Além de rodar a aplicação diretamente com o Docker, você também pode usar o
 
 ### Passos
 
-1. Clone este repositório para a sua máquina (caso ainda não tenha clonado):
-
-    ```bash
-    git clone https://github.com/021Antonio/Estudos_Inteli.git
-    ```
-
-2. Acesse o diretório do projeto:
-
-    ```bash
-    cd Estudos_Inteli/Provas/Modulo10/prova3
-    ```
-
-3. Construa e suba os serviços utilizando o `docker-compose`:
+1. Construa e suba os serviços utilizando o `docker-compose`:
 
     ```bash
     sudo docker-compose up --build
@@ -51,11 +39,11 @@ Além de rodar a aplicação diretamente com o Docker, você também pode usar o
 
     Isso irá construir a imagem do backend e subir a aplicação na porta `8000`.
 
-4. Acesse a documentação interativa da API:
+2. Acesse a documentação interativa da API:
 
     Após o contêiner ser iniciado com sucesso, abra seu navegador e acesse [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) para visualizar a documentação interativa da API, onde você pode testar todos os endpoints.
 
-5. Os logs da aplicação serão salvos no diretório `logs/app.log` do seu projeto, caso precise acessar informações de execução da aplicação.
+3. Os logs da aplicação serão salvos no diretório `logs/app.log` do projeto, caso precise acessar informações de execução da aplicação.
 
 ## Funcionalidades Adicionadas
 
