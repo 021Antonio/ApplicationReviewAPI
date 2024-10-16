@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  app:
+    build:
+      context: ./src  
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./logs:/app/logs
+      - ./data:/app/data  
+    environment:
+      - LOG_LEVEL=info
+    depends_on:
+      - redis
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+  redis:
+    image: redis
+    container_name: redis
+    ports:
+      - "6379:6379"
+
+volumes:
+  logs:
+    driver: local
+  data:
+    driver: local
