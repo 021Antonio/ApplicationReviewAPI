@@ -78,6 +78,7 @@ async def log_requests(request: Request, call_next):
         response = JSONResponse(content=response_content)
         
         # Armazena a resposta no Redis como string JSON
-        redis_client.setex(cache_key, 300, response_body)
+        redis_client.setex(cache_key, 5, response_body)
 
     return response
+    
